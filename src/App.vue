@@ -1,16 +1,52 @@
 <template>
   <div class="container">
     <Header title="Task Tracker"/>
+    <Tasks :tasks="tasks"/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
+import Tasks from "@/components/TaskList";
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Tasks
+  },
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: 'Provezbaj AEM/Vue strukturu',
+        day: '15 April 2022',
+        reminder: true,
+      },
+      {
+        id: 2,
+        text: 'Zavrsi projekat iz Web sistema',
+        day: '17 April 2022',
+        reminder: true,
+      },
+      {
+        id: 3,
+        text: 'Odraditi FE walkthrough na FSBP projektu',
+        day: '18 April 2022',
+        reminder: true,
+      },
+      {
+        id: 4,
+        text: 'Upiši sate za danas i naruči hranu za sutra',
+        day: 'Svaki dan',
+        reminder: false,
+      },
+    ]
   }
 }
 </script>
