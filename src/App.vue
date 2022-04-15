@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <Header/>
+    <Header title="Task Tracker"/>
   </div>
 </template>
 
 <script>
-import Header from "@/components/header";
+import Header from "@/components/Header";
 
 export default {
   name: 'App',
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap');
 
 * {
   box-sizing: border-box;
