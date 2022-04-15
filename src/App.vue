@@ -2,6 +2,7 @@
   <div class="container">
     <Header title="Task Tracker"/>
     <Tasks
+        @toggle-reminder="toggleReminder"
         @delete-task="deleteTask"
         :tasks="tasks"/>
   </div>
@@ -26,6 +27,11 @@ export default {
     deleteTask(id) {
       this.tasks = this.tasks.filter((task) => task.id !== id);
     },
+    // check if task id matches, if it does, change the boolean value to the opposite
+    toggleReminder(id) {
+      this.tasks = this.tasks.map((task) => task.id === id
+          ? {...task, reminder: !task.reminder} : task)
+    }
   },
   created() {
     this.tasks = [
