@@ -10,7 +10,7 @@
 
       </i>
     </h3>
-    <p>{{task.day}}</p>
+    <p>{{ task.day }}</p>
   </div>
 </template>
 
